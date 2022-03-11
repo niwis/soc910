@@ -1,0 +1,25 @@
+// Copyright 2022 ETH Zurich and University of Bologna.
+// Licensed under the Apache License, Version 2.0, see LICENSE for details.
+// // SPDX-License-Identifier: Apache-2.0
+{
+  name: "thead_openc910",
+  target_dir: "thead_openc910",
+
+  upstream: {
+    url: "https://github.com/T-head-Semi/openc910.git",
+    rev: "main", 
+  },
+
+  patch_dir: "patches/thead_openc910",
+
+  mapping: [
+    {from: 'C910_RTL_FACTORY/gen_rtl', to: 'gen_rtl', patch_dir: 'gen_rtl'},
+    {from: 'smart_run/logical', to: 'logical', patch_dir: 'logical'}
+  ]
+
+  include_from_upstream: [
+    "C910_RTL_FACTORY/gen_rtl",
+    "smart_run/logical"
+  ]
+}
+
