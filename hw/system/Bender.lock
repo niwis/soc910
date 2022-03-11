@@ -1,0 +1,8 @@
+---
+packages:
+  openc910:
+    revision: ~
+    version: ~
+    source:
+      Path: /scratch/nwistoff/Development/soc910/hw/system/../vendor/thead_openc910
+    dependencies: []
