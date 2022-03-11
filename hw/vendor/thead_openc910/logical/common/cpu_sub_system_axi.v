@@ -13,6 +13,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+`define APB_BASE_ADDR 40'hb0000000
+
 module cpu_sub_system_axi
 ///////////////////////////////////////////////////
 // Ports Declarations

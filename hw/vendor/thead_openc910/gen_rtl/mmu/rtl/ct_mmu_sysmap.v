@@ -13,6 +13,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+`include "sysmap.h"
+
 // &ModuleBeg; @28
 module ct_mmu_sysmap(
   mmu_sysmap_pa_y,

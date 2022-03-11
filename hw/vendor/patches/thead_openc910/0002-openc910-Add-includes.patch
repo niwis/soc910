@@ -1,0 +1,55 @@
+From baf089d9e5b2aefc42a3b13aca43a5cead2527e4 Mon Sep 17 00:00:00 2001
+From: Nils Wistoff <nwistoff@iis.ee.ethz.ch>
+Date: Fri, 11 Mar 2022 23:31:11 +0100
+Subject: [PATCH] openc910: Add includes
+
+Signed-off-by: Nils Wistoff <nwistoff@iis.ee.ethz.ch>
+---
+ gen_rtl/biu/rtl/ct_biu_read_channel.v | 3 +++
+ gen_rtl/mmu/rtl/ct_mmu_sysmap.v       | 2 ++
+ logical/common/cpu_sub_system_axi.v   | 2 ++
+ 3 files changed, 7 insertions(+)
+
+diff --git a/gen_rtl/biu/rtl/ct_biu_read_channel.v b/gen_rtl/biu/rtl/ct_biu_read_channel.v
+index b0e73d6..82827e0 100644
+--- a/gen_rtl/biu/rtl/ct_biu_read_channel.v
++++ b/gen_rtl/biu/rtl/ct_biu_read_channel.v
+@@ -12,6 +12,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
++
++`include "cpu_cfig.h"
++
+ module ct_biu_read_channel(
+   araddr,
+   arbar,
+diff --git a/gen_rtl/mmu/rtl/ct_mmu_sysmap.v b/gen_rtl/mmu/rtl/ct_mmu_sysmap.v
+index 8bb46d6..51cead3 100644
+--- a/gen_rtl/mmu/rtl/ct_mmu_sysmap.v
++++ b/gen_rtl/mmu/rtl/ct_mmu_sysmap.v
+@@ -13,6 +13,8 @@ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+ 
++`include "sysmap.h"
++
+ // &ModuleBeg; @28
+ module ct_mmu_sysmap(
+   mmu_sysmap_pa_y,
+diff --git a/logical/common/cpu_sub_system_axi.v b/logical/common/cpu_sub_system_axi.v
+index 8acde95..ddabfb2 100644
+--- a/logical/common/cpu_sub_system_axi.v
++++ b/logical/common/cpu_sub_system_axi.v
+@@ -13,6 +13,8 @@ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
+ 
++`define APB_BASE_ADDR 40'hb0000000
++
+ module cpu_sub_system_axi
+ ///////////////////////////////////////////////////
+ // Ports Declarations
+-- 
+2.16.5
+
